@@ -1,0 +1,323 @@
+PRD – Site One Page Institucional: Sabrine Machado | Manicure e Nail Designer (@sabrinemachado_nails)
+Cliente: Sabrine Machado – Manicure e Nail Designer • Philadelphia, PA 🇺🇸 Tipo: Site one page institucional, elegante, sofisticado e otimizado para Google e IAs Idiomas: Português do Brasil (padrão) + opção clara de inglês no cabeçalho. Rodapé e modais legais em inglês. Agendamento: WhatsApp +1 (267) 776-1462 Destino: Google AI Studio (gerar o site completo a partir deste documento)
+1. Instrução principal para a IA
+Crie um site one page institucional para Sabrine Machado, manicure e nail designer em Philadelphia, Pensilvânia, especialista em alongamento e banho de gel, manutenção, pedicure avançada (cutilagem russa), nail art e chrome, com mais de 7 anos de experiência. O site deve transmitir sofisticação, delicadeza e brilho “espelhado” em tons de cinza e prata. Use React + Tailwind CSS + Framer Motion (ou HTML/CSS/JS puro com IntersectionObserver), 100% responsivo (mobile-first, o público vem do Instagram) e acessível (WCAG 2.1 AA / ADA). Entregue o site completo, com todas as seções abaixo na ordem indicada.
+Regras de ouro
+1. Toda seção tem título + subtítulo de impacto (copy que cria conexão) e um botão de agendar.
+2. Todos os botões de agendar levam ao WhatsApp dela (seção 5), com mensagem pré-pronta.
+3. Todos os links de imagem devem ser usados exatamente como estão neste PRD.
+4. Site em português com opção clara de inglês no cabeçalho (seção 4).
+5. Serviços sem valores (não informados): o campo de preço é opcional em siteData e fica oculto enquanto estiver vazio.
+6. SEO interno completo, pensado para Google e IAs recomendarem (seção 8).
+7. Linguagem responsável: sem promessas absolutas. Duração e resultado variam de pessoa para pessoa.
+2. Identidade visual
+Tema: brilho de espelho e prata, minimalismo luxuoso, reflexos suaves, como o acabamento chrome das unhas. Paleta branco, cinza claro e detalhes cinza com efeito espelhado/metálico.
+Paleta
+• Branco #FFFFFF (fundo principal)
+• Cinza claro #F1F2F3 e cinza névoa #E6E8EA (seções alternadas)
+• Cinza prata #B4B8BC, cinza chumbo #6A6E72 e grafite #2A2C2E
+• Texto sobre claro: #2A2C2E; texto secundário #5F6368 (contraste mínimo 4.5:1)
+Efeito espelhado (cinza metálico) — variável para bordas, filetes, ícones, títulos de destaque e botões:
+--mirror: linear-gradient(135deg, #8E9296 0%, #F4F5F6 22%, #B4B8BC 45%, #FFFFFF 62%, #9A9EA2 80%, #E6E8EA 100%);
+• Molduras das fotos: borda de 2px com --mirror (cromado) e segunda linha deslocada, mais um reflexo diagonal que atravessa a foto lentamente.
+• Títulos de destaque: palavras-chave com gradiente --mirror na versão escura (#6A6E72 → #2A2C2E) para manter o contraste sobre fundos claros.
+• Botões: primário com fundo --mirror suave e texto grafite; secundário com contorno --mirror; brilho deslizante no hover.
+• Divisores: filete fino com --mirror e pequeno ornamento em forma de unha (amêndoa) central.
+• Cards com cantos suaves (6px), borda fina espelhada, leve sombra; fundo branco semitransparente.
+• Foto do hero em moldura vertical em formato de amêndoa (topo arredondado/pontudo suave, como uma unha), com contorno espelhado e reflexo. Demais fotos com moldura espelhada retangular. Logo do studio em círculo (6.6).
+• Muito espaço em branco, ritmo editorial.
+Alternância de fundos (intercalando branco e cinza claro)
+#
+Seção
+Fundo
+1
+Hero
+Branco
+2
+Serviços
+Cinza claro
+3
+Galeria
+Branco
+4
+Sobre + Instagram
+Cinza claro
+5
+Feedbacks
+Branco
+6
+Studio + Localização
+Cinza claro
+7
+Agendamento
+Branco
+8
+FAQ
+Cinza claro
+9
+Rodapé
+Branco, discreto
+Tipografia (Google Fonts)
+• Títulos: Forum (clássica e elegante)
+• Corpo e botões: Albert Sans (rótulos em maiúsculas pequenas, espaçadas)
+• Assinatura (nome sob a frase): Mrs Saint Delafield
+• Logo (texto): “SABRINE MACHADO” espaçado com “NAIL DESIGNER” pequeno entre filetes espelhados.
+3. Animações
+• Cada seção entra com fade-in + slide-up (uma vez), conteúdo interno em cascata.
+• Filetes e molduras espelhadas que se desenham ao entrar; reflexo diagonal lento nas fotos e botões.
+• Hero: título linha a linha, foto com leve parallax.
+• Navbar transparente no topo, vira branca com filete espelhado ao rolar.
+• Hover: zoom suave nas fotos, elevação nos cards.
+• Carrossel do Sobre com transição suave (fade) e botão de pausa quando houver autoplay.
+• prefers-reduced-motion respeitado; scroll suave.
+4. Idiomas (PT-BR + EN)
+• Padrão: português (BR). No cabeçalho, seletor PT | EN bem visível, em pílula com borda espelhada e rótulo claro (“Read in English” / “Ler em português”), também no menu mobile, visível sem abrir o menu.
+• Troca instantânea de todo o conteúdo sem recarregar, via translations.pt / translations.en, escolha em localStorage (com try/catch), <html lang> dinâmico (pt-BR / en-US).
+• Textos PT deste PRD são a versão final. Em EN, usar as versões dadas e traduzir fielmente o restante (serviços, FAQ, feedbacks, formulário, mensagens).
+• Rodapé, Privacy Policy e Terms of Service sempre em inglês.
+5. Dados e links (usar exatamente)
+• WhatsApp (todos os botões de agendar): +1 (267) 776-1462 → https://wa.me/12677761462?text=<mensagem>. Guardar em whatsappPhone. (Confirmar com a Sabrine que este número recebe WhatsApp.)
+• Instagram: https://www.instagram.com/sabrinemachado_nails/
+• Post (seção Sobre / Instagram): https://www.instagram.com/p/De2rUmsuPum/
+• Endereço do studio: não foi informado. Campo studioAddress em siteData. Até ser preenchido, o mapa mostra Philadelphia, PA e o botão do mapa vira “Pedir o endereço no WhatsApp”; quando preenchido, o mapa e o Como chegar usam o endereço exato.
+Mensagem padrão (PT): Olá, Sabrine! 💛 Vi o seu site e gostaria de agendar um horário. (EN: translate)
+Tudo em um único objeto siteData.
+6. Seções (na ordem)
+Navbar (fixa)
+• Logo textual “SABRINE MACHADO · Nail Designer”.
+• Links: Serviços · Galeria · Sobre · Avaliações · Studio · FAQ (EN: Services · Gallery · About · Reviews · Studio · FAQ)
+• Seletor PT | EN e botão Agendar (WhatsApp).
+• Mobile: hambúrguer com painel branco. Link “Skip to content”.
+6.1 Hero
+Layout: duas colunas; texto e cards à esquerda; foto dela à direita em moldura de amêndoa com contorno espelhado e reflexo. Foto: https://i.ibb.co/hFZ8HTGZ/798688104-18102600995614995-7428056892688830150-n-convertido-de-jpg.webp
+• Eyebrow: MANICURE & NAIL DESIGNER • PHILADELPHIA, PA 🇺🇸
+• Título: Unhas impecáveis, resistentes e desenhadas à sua imagem (EN: Flawless, long-lasting nails, designed in your image)
+• Subtítulo: Alongamento em gel, banho de gel, pedicure avançada e nail art em Philadelphia, PA, com a Sabrine Machado: técnica refinada, durabilidade e muito carinho em cada detalhe. (EN: Gel extensions, gel overlay, advanced pedicure and nail art in Philadelphia, PA, with Sabrine Machado: refined technique, durability and care in every detail.)
+• Botões: Agendar meu horário (WhatsApp) · Ver serviços (#servicos)
+Cards (cantos suaves, borda espelhada, ícone fino):
+• 📍 Philadelphia, PA
+• 💎 +7 anos de experiência em unhas
+• 👣 Pedicure avançada: cutilagem russa e banho de gel
+6.2 Serviços (foto, nome e descrição)
+• Título: Cada detalhe pensado para as suas unhas (EN: Every detail designed for your nails)
+• Subtítulo: Do alongamento à pedicure, escolha o cuidado que combina com o seu estilo e a sua rotina. (EN: From extensions to pedicure, choose the care that suits your style and routine.)
+Layout: três grupos em abas ou chips: Mãos · Pés · Detalhes & Extras. Cada serviço em card (grid 2 colunas desktop, 1 mobile) com foto (moldura espelhada), nome, descrição e botão Agendar (WhatsApp, mensagem com o nome do serviço). Sem valores (campo opcional price, oculto se vazio).
+⚠️ Fotos dos serviços: não foram enviadas fotos por serviço. Reaproveitar as fotos da galeria: serviços de pés = galeria 1 (a imagem é de pedicure francesa) e os demais usam galeria 2 a 8 em rotação. Guardar em siteData.services[i].image para troca fácil e confirmar com a Sabrine qual foto representa cada serviço.
+💅 Mãos
+Serviço (PT / EN)
+Descrição
+Alongamento em Gel (tamanho S/M) / Gel extensions (short/medium)
+Extensão de unhas em gel nos tamanhos curto ou médio, com acabamento elegante e natural.
+Alongamento em Gel (tamanho L) / Gel extensions (long)
+Extensão de unhas em gel no tamanho longo, com estrutura firme e acabamento impecável.
+Banho de Gel (Blindagem) / Gel overlay
+Camada de gel sobre a unha natural para dar resistência, sem aumentar o tamanho.
+Manutenção (tamanho S/M) / Refill (short/medium)
+Manutenção periódica para unhas de tamanho curto e médio, mantendo o formato e a durabilidade.
+Manutenção (tamanho L) / Refill (long)
+Manutenção periódica para unhas de tamanho longo.
+Manutenção de outra profissional / Refill from another artist
+Para trabalhos feitos em outro espaço: retiramos o gel antigo e refazemos a estrutura. Cobrança diferenciada.
+Remoção segura / Safe removal
+Retirada completa e saudável do alongamento ou do gel, respeitando a sua unha natural.
+👣 Pés (Pedicure Avançada)
+Serviço (PT / EN)
+Descrição
+Pedicure com Cutilagem Russa / Pedicure with Russian cuticle care
+Limpeza profunda e a seco das cutículas dos pés, com motor e brocas, para um acabamento perfeito.
+Pedicure com Banho de Gel / Pedicure with gel overlay
+Cutilagem combinada com gel nas unhas dos pés, para máxima durabilidade.
+✨ Detalhes & Extras (Nail Art)
+Serviço (PT / EN)
+Descrição
+Francesinha ou Babyboomer / French or Babyboomer
+Técnicas clássicas e degradês de alta durabilidade.
+Nail Art Simples / Simple nail art
+Desenhos minimalistas, linhas ou glitter por unha.
+Pedrarias / Joias de Unha / Rhinestones & nail jewels
+Aplicação de cristais e adereços brilhantes.
+Chrome
+Acabamento espelhado de efeito metálico, para unhas cheias de brilho.
+⚠️ O Chrome veio sem descrição: a acima é uma sugestão, a Sabrine deve confirmar.
+Nota geral (pequena, sob os cards): Avaliação das unhas faz parte do atendimento. A duração e o resultado variam de pessoa para pessoa. (EN: translate)
+Botão da seção: Agendar meu horário.
+6.3 Galeria
+• Título: Unhas que viram assinatura (EN: Nails that become a signature)
+• Subtítulo: Formatos, cores e acabamentos feitos com precisão e delicadeza. (EN: Shapes, colours and finishes made with precision and delicacy.)
+8 fotos em grid (4×2 desktop largo, 2 colunas mobile), moldura espelhada com reflexo no hover, zoom suave. Lightbox ao clicar: tela cheia, fundo escuro translúcido, setas esquerda/direita, X, contador (“3 / 8”), teclado, swipe e foco preso.
+Fotos (8):
+1. https://i.ibb.co/LzkV7RXD/Classic-French-Pedicure-Both-Feet-Warm-Pink-White-Tips-Fall-Pedicure-Ideas.webp
+2. https://i.ibb.co/Psb2LwYC/Save-Clip-App-864485121-18109325447614995-1720357407734140835-n.webp
+3. https://i.ibb.co/pjN96Y5S/Save-Clip-App-452026765-18007319669614995-8691737152459971534-n.webp
+4. https://i.ibb.co/jkDJHwTt/Save-Clip-App-517875902-18050046197614995-4890607003820364983-n.webp
+5. https://i.ibb.co/hRf1z0RF/Save-Clip-App-475531605-18031352789614995-796821655751378991-n.webp
+6. https://i.ibb.co/ZR8QBTqw/Save-Clip-App-722637691-18090043439614995-1762588882783968559-n.webp
+7. https://i.ibb.co/sGxW4S4/Save-Clip-App-851189195-18108722627614995-2704523098569633300-n.webp
+8. https://i.ibb.co/ZzxcQBSG/Save-Clip-App-833603391-18106180502614995-7858371417597450961-n.webp
+Nota pequena: Resultados individuais podem variar. Botão: Quero unhas assim (WhatsApp).
+6.4 Sobre + Instagram
+Layout (Sobre): duas colunas; à esquerda, carrossel de 2 fotos dela em moldura espelhada com reflexo; à direita, título, frase, parágrafos e indicadores.
+Carrossel (2 fotos): a primeira que aparece é a do hero; ao arrastar/clicar na seta para o lado, aparece a segunda. Setas esquerda/direita visíveis, indicadores (bolinhas), swipe no celular, teclado (← →) e aria-label descritivo.
+1. https://i.ibb.co/hFZ8HTGZ/798688104-18102600995614995-7428056892688830150-n-convertido-de-jpg.webp
+2. https://i.ibb.co/GvhW54Rz/Captura-de-tela-2026-10-27-154355-convertido-de-png.webp
+• Título: Conheça a Sabrine Machado (EN: Meet Sabrine Machado)
+• Subtítulo: Por trás de cada unha, técnica, delicadeza e o desejo de fazer você se sentir linda. (EN: Behind every nail, technique, delicacy and the wish to make you feel beautiful.)
+• Frase (serifada itálica, aspas em cinza espelhado, assinatura em Mrs Saint Delafield): “Unhas bem cuidadas mudam o dia: cada detalhe é um jeito de dizer que você merece o melhor.” — Sabrine Machado (frase de exemplo; ela deve aprovar) (EN: translate)
+• Parágrafo 1 (emocional): Para a Sabrine, cuidar das unhas é um ritual de autocuidado. Cada atendimento é um momento seu: sem pressa, com carinho e atenção a cada detalhe, para que você saia com as mãos e os pés lindos e a autoestima lá no alto. Brasileira em Philadelphia, ela recebe cada cliente como quem recebe uma amiga.
+• Parágrafo 2 (autoridade): Com mais de 7 anos de experiência, a Sabrine une técnica e atualização constante, com cursos e aperfeiçoamentos na área. É especialista em alongamento e banho de gel, manutenção, pedicure avançada com cutilagem russa, nail art e chrome, sempre com protocolos de higiene e foco em durabilidade e acabamento impecável.
+• Indicadores animados (sem números inventados): +7 anos de experiência · Pedicure avançada · Nail art & Chrome · Philadelphia, PA
+• Linha discreta (só exibe se preenchida em siteData): Licenses: [ ]
+⚠️ O pedido dizia “+7 anos de experiência e cursos”. Foi escrito como cursos e aperfeiçoamentos que ela fez. Se ela também ministra cursos, ajustar o texto.
+Botão: Agendar com a Sabrine (WhatsApp).
+Instagram (sub-bloco no fim da seção, com divisor espelhado):
+• Subtítulo: Acompanhe a Sabrine no Instagram (EN: Follow Sabrine on Instagram) · Novas ideias, bastidores e inspiração de nail art, todos os dias. (EN: New ideas, behind the scenes and nail-art inspiration, every day.)
+• Avatar com anel espelhado, @sabrinemachado_nails, botão Seguir no Instagram (https://www.instagram.com/sabrinemachado_nails/, nova aba).
+• Post integrado, reproduzível no próprio site: https://www.instagram.com/p/De2rUmsuPum/ via embed oficial (iframe https://www.instagram.com/p/De2rUmsuPum/embed), centralizado, moldura espelhada, largura máx. ~400px. Sem capa, thumbnail ou imagem de pré-visualização personalizada.
+Botões: Seguir @sabrinemachado_nails · Agendar (WhatsApp).
+6.5 Feedbacks (6, com 5 estrelas)
+• Título: Quem prova, volta (EN: Those who try it come back)
+• Subtítulo: Palavras de clientes que confiaram as suas unhas à Sabrine. (EN: Words from clients who trusted Sabrine with their nails.)
+Grid 3×2 (desktop) ou carrossel (mobile, com pausa e setas), cards com borda espelhada, 5 estrelas em cinza espelhado, aspas decorativas, texto, nome e serviço.
+⚠️ Todos são textos de exemplo. Nos EUA, a FTC proíbe avaliações falsas: substituir por avaliações reais (Instagram, WhatsApp, Google), com autorização, antes de publicar.
+#
+Nome
+Serviço
+Depoimento
+1
+Camila R.
+Alongamento em gel
+“Ficaram lindas, resistentes e com um acabamento perfeito. A Sabrine é muito cuidadosa!”
+2
+Sophie M.
+Banho de gel
+“My natural nails feel so strong and look so polished. Love it!”
+3
+Fernanda L.
+Pedicure com cutilagem russa
+“Nunca tinha feito uma pedicure tão detalhada. Os pés ficaram impecáveis.”
+4
+Juliana P.
+Manutenção
+“Atendimento super pontual e carinhoso. A manutenção durou muito bem.”
+5
+Emma T.
+Chrome
+“The chrome finish is gorgeous. Everyone asks where I got them done.”
+6
+Mariana S.
+Nail art
+“Ela entendeu exatamente o que eu queria. Ambiente lindo e muito acolhedor.”
+Botão: Quero viver essa experiência (WhatsApp).
+6.6 Studio + Localização
+• No início da seção, o logo do studio dentro de um círculo (moldura espelhada em anel, com reflexo suave, centralizado, tamanho médio): https://i.ibb.co/h1LN0MLr/Centering-logo-on-white-background-797ce1dc-2-K.webp
+• Título: Um studio pensado para o seu momento de cuidado (EN: A studio designed for your moment of care)
+• Subtítulo: Higiene, conforto e privacidade em Philadelphia, PA, para você relaxar enquanto cuidamos das suas unhas. (EN: Hygiene, comfort and privacy in Philadelphia, PA, so you can relax while we care for your nails.)
+• Foto do espaço (moldura espelhada, grande): https://i.ibb.co/W4q75PgD/Correcting-text-on-wall-660615a6-2-K-1.webp
+• Cards (cantos suaves, borda espelhada, ícone fino), grid 3×2: Segurança (protocolos rigorosos) · Higiene (materiais esterilizados e descartáveis) · Conforto (ambiente aconchegante e calmo) · Fácil acesso (confirmar transporte e estacionamento) · Privacidade (atendimento reservado) · Atenção exclusiva (tempo e calma em cada detalhe).
+• Localização: card com o endereço (siteData.studioAddress) e botão Como chegar (https://www.google.com/maps/dir/?api=1&destination=<endereço codificado>). Abaixo, Google Maps integrado: <iframe> (https://www.google.com/maps?q=<endereço codificado>&output=embed), largura total, moldura espelhada, loading=lazy, title, altura 380–450px.
+• Enquanto o endereço não for informado: mapa de Philadelphia, PA (https://www.google.com/maps?q=Philadelphia,+PA&output=embed), aviso O endereço exato é enviado ao confirmar o agendamento e o botão vira Pedir o endereço no WhatsApp (abre a conversa com a mensagem Olá, Sabrine! Pode me enviar o endereço do studio?).
+• Campos opcionais (só exibem se preenchidos): Horário de funcionamento e Estacionamento.
+Botão: Agendar minha visita (WhatsApp).
+6.7 Agendamento + educação
+• Título: O seu próximo set de unhas começa aqui (EN: Your next set of nails starts here)
+• Subtítulo: Escolha o serviço, veja a mensagem pronta e envie direto para a Sabrine no WhatsApp. (EN: Choose your service, see the ready-made message and send it straight to Sabrine on WhatsApp.)
+Layout em 2 colunas (fundo branco, cards cinza claro com borda espelhada, cantos suaves). Esquerda: orientações antes de agendar. Direita: mini formulário com pré-visualização.
+Antes de agendar (cards educativos, ícones finos):
+• ⏰ Atrasos: chegue no horário. Atrasos acima de 10 minutos podem reduzir o atendimento ou exigir reagendamento, para respeitar as clientes seguintes.
+• 📅 Remarcação e cancelamento: avise com pelo menos 24 horas de antecedência.
+• 🔁 Manutenção: faça no prazo combinado para manter o resultado. Trabalhos vindos de outra profissional têm cobrança diferenciada (retirada do gel antigo e nova estrutura).
+• 💅 Saúde das unhas: informe se há machucados, infecções, fungos ou alergias antes do atendimento.
+• 📸 Referência: se tiver foto do modelo que deseja, envie na conversa.
+• 🤍 Atendimento reservado: sempre que possível, venha sem acompanhantes.
+⚠️ Orientações de exemplo: a Sabrine deve confirmar tolerância de atraso, prazo de cancelamento, taxas, sinal e política de acompanhantes.
+Mini formulário (sem <form>, usar onClick/onChange; todos os campos com <label> visível):
+• Como gostaria de ser chamada(o)? (texto)
+• Serviço (todos os serviços da seção 6.2, mais “Ainda não sei”)
+• Tamanho (S/M · L · Não sei)
+• Tipo (Primeira vez · Manutenção · Vindo de outra profissional)
+• Melhor dia (campo de data) e melhor horário (período ou hora)
+• Tem foto de referência? (Sim, vou enviar na conversa / Não tenho)
+• Algo que devemos saber? (opcional)
+Mensagem pronta (pré-visualização em tempo real) em uma caixa elegante, atualizada a cada campo, com Copiar mensagem e Enviar pelo WhatsApp (abre https://wa.me/12677761462?text= + mensagem com encodeURIComponent, nova aba). Texto de apoio: Se tiver foto de referência, anexe na conversa.
+Modelo (PT): Olá, Sabrine! 💛 Gostaria de agendar um horário. Nome: {nome} Serviço: {serviço} Tamanho: {tamanho} Tipo: {tipo} Dia e horário: {dia} {horário} Foto de referência: {sim/não} Observações: {obs} (EN: traduzir naturalmente)
+6.8 FAQ (accordion acessível, borda espelhada)
+• Título: Perguntas frequentes (EN: Frequently asked questions)
+• Subtítulo: Tudo o que você precisa saber antes de agendar. (EN: Everything you need to know before booking.)
+1. Como faço para agendar? Pelo WhatsApp: preencha o mini formulário e envie a mensagem. A Sabrine confirma o horário.
+2. Qual a diferença entre alongamento e banho de gel? O alongamento adiciona comprimento com extensão em gel. O banho de gel (blindagem) reforça a unha natural, sem aumentar o tamanho.
+3. Quais tamanhos de alongamento existem? S/M (curto ou médio) e L (longo).
+4. Quando faço a manutenção? Periodicamente, no prazo combinado no atendimento, para manter o formato e a durabilidade.
+5. Faz manutenção de trabalho de outra profissional? Sim, com cobrança diferenciada, pois é preciso retirar o gel antigo e refazer a estrutura.
+6. A remoção é segura? Sim. A remoção é completa e saudável, respeitando a sua unha natural.
+7. O que é a pedicure com cutilagem russa? Limpeza profunda e a seco das cutículas dos pés com motor e brocas, para um acabamento perfeito.
+8. O que é o Chrome? Um acabamento espelhado de efeito metálico para as unhas.
+9. Quanto custa? Os valores são informados pelo WhatsApp, conforme o serviço e o tamanho.
+10. E se eu me atrasar? Avise pelo WhatsApp. Há uma tolerância limitada, conforme as orientações de agendamento.
+11. E se eu precisar remarcar ou cancelar? Avise com pelo menos 24 horas de antecedência. (Política a confirmar pela Sabrine.)
+12. Onde fica o studio? Em Philadelphia, PA. O endereço exato é enviado ao confirmar o agendamento.
+Botão final: Agendar meu horário (WhatsApp).
+6.9 Rodapé (discreto, EUA, conforme ADA; em inglês)
+Visual: fundo branco, filete fino com --mirror no topo, tipografia pequena (text-xs/text-sm), centralizado. Cor do texto de baixo contraste visual, mas com contraste mínimo de 4.5:1 (WCAG AA): #5F6368 sobre #FFFFFF (~6:1). Links com foco visível e sublinhado ao hover/foco.
+• Linha 1 (copyright): © 2026 [Professional Name]. All rights reserved.
+• Linha 2 (links lado a lado, texto acessível): Privacy Policy · Terms of Service, abrindo modais na mesma página.
+• Linha opcional (só exibe se preenchida): License No. [ ].
+Modais legais (em inglês, acessíveis: foco preso, X e Esc fecham, role=dialog, aria-modal):
+⚠️ Texto-modelo, a ser revisado por um advogado antes de publicar.
+• Privacy Policy: who we are; information collected (name, phone, service of interest, preferred times, messages via the form and WhatsApp; allergy or nail-health details you choose to share; photos only with consent); use (scheduling, service, client records; never sold); third parties (WhatsApp/Meta, Instagram and Google Maps embeds); security and retention; your choices (access, correction, deletion); children (not directed to children under 13); contact [E-mail].
+• Terms of Service: content is general information; clients must disclose allergies and nail or skin conditions; services are subject to assessment; punctuality, rescheduling and cancellation policy [to be confirmed]; refill and removal terms, including the different rate for work done by another artist; results and durability vary; liability limited as permitted by law; governing law: Commonwealth of Pennsylvania; accessibility statement (WCAG 2.1 AA).
+7. Botão flutuante
+Canto inferior direito, cinza espelhado com texto grafite, ícone de WhatsApp e texto Agendar, com reflexo suave, visível após o hero, alvo de toque mínimo 44×44px.
+8. SEO interno (Google + IAs, mercado dos EUA)
+Técnico
+• <html lang> dinâmico; âncoras #servicos, #galeria, #sobre, #avaliacoes, #studio, #agendamento, #faq.
+• Title EN: “Sabrine Machado | Gel Nail Extensions & Nail Art in Philadelphia, PA”. Title PT: “Sabrine Machado | Alongamento em Gel e Nail Designer em Philadelphia, PA”.
+• Meta description PT (~155 car.): “Alongamento e banho de gel, pedicure avançada, nail art e chrome em Philadelphia, PA, com a nail designer Sabrine Machado. Agende o seu horário.” EN equivalente.
+• Um único <h1>, <h2> por seção, HTML semântico, alt descritivo bilíngue, loading=lazy (exceto hero), width/height, Open Graph e Twitter Card (foto do hero), canonical, hreflang pt-BR / en-US.
+• Favicon: monograma “SM” em cinza espelhado sobre branco (ou o logo do studio recortado), apple-touch-icon 180×180.
+• Arquivos: robots.txt, sitemap.xml e llms.txt (resumo factual para IAs).
+Dados estruturados (JSON-LD)
+• NailSalon/BeautySalon: nome, areaServed Philadelphia, telephone +12677761462, sameAs (Instagram), founder (Person: Sabrine Machado) e hasOfferCatalog com os serviços (sem preços). Endereço só quando studioAddress for preenchido.
+• FAQPage com o FAQ. Review apenas com depoimentos reais.
+Para IAs recomendarem (GEO)
+• Bloco discreto “Em resumo / At a glance” (fim da seção Sobre ou rodapé): Sabrine Machado é manicure e nail designer em Philadelphia, Pensilvânia, com mais de 7 anos de experiência, especializada em alongamento e banho de gel, manutenção, pedicure avançada com cutilagem russa, nail art e chrome. Atendimento com agendamento por WhatsApp.
+• Respostas curtas e diretas no início de cada FAQ (resposta primeiro, detalhe depois).
+• Mesma identidade (nome, localização, telefone) escrita sempre igual no site, Instagram e Google Business Profile (recomendação fora do site).
+• Palavras-chave naturais no copy: gel nail extensions Philadelphia, Russian manicure Philadelphia, advanced pedicure Philadelphia, chrome nails Philadelphia, nail art Philadelphia PA, Brazilian nail designer Philadelphia, manicure brasileira na Filadélfia, alongamento em gel Philadelphia.
+Acessibilidade (ADA / WCAG 2.1 AA): contraste mínimo 4.5:1 (inclusive no rodapé e nos títulos com gradiente espelhado), foco visível, navegação por teclado, link “skip to content”, alt em todas as imagens, labels nos campos, pausa em animações automáticas, lightbox, carrossel e modais acessíveis, alvos de toque de 44px, texto redimensionável até 200%, prefers-reduced-motion.
+9. Resumo de CTAs (todos para o WhatsApp)
+Seção
+Botão
+Navbar e flutuante
+Agendar
+Hero
+Agendar meu horário · Ver serviços (#servicos)
+Serviços
+Agendar (por card) · Agendar meu horário
+Galeria
+Quero unhas assim
+Sobre + Instagram
+Agendar com a Sabrine · Seguir @sabrinemachado_nails (Instagram) · Agendar
+Feedbacks
+Quero viver essa experiência
+Studio
+Agendar minha visita · Como chegar (Google Maps) ou Pedir o endereço no WhatsApp
+Agendamento
+Copiar mensagem · Enviar pelo WhatsApp
+FAQ
+Agendar meu horário
+Rodapé
+(links legais)
+10. Checklist de aceitação
+[ ] 8 seções + rodapé na ordem correta; todas com título, subtítulo e botão
+[ ] Paleta branco e cinza claro alternando, com detalhes cinza efeito espelhado/metálico
+[ ] Seletor PT | EN claro no cabeçalho; textos legais em inglês
+[ ] Hero com foto em moldura de amêndoa, título de impacto e 3 cards
+[ ] Serviços (12) com foto, nome e descrição, sem valores
+[ ] Galeria de 8 fotos com lightbox
+[ ] Sobre com carrossel de 2 fotos (setas/swipe), frase entre aspas, 2 parágrafos (+7 anos) e post De2rUmsuPum integrado sem capa
+[ ] 6 feedbacks com 5 estrelas (substituir por reais)
+[ ] Studio com logo em círculo, foto do espaço, 6 cards, Google Maps e Como chegar
+[ ] Agendamento com orientações, mini formulário e mensagem pronta em pré-visualização
+[ ] FAQ em accordion; rodapé com copyright, Privacy Policy e Terms of Service (contraste mínimo 4.5:1)
+[ ] SEO interno, JSON-LD, FAQPage, llms.txt e bloco “At a glance”
+[ ] 100% responsivo e acessível, animações ao rolar

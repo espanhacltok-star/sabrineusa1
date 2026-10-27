@@ -1,0 +1,5 @@
+# Robots.txt for Sabrine Machado Nail Designer
+User-agent: *
+Allow: /
+
+Sitemap: https://ais-pre-hwynqe2tlp6ejdoevtr4x6-680127363150.us-east1.run.app/sitemap.xml

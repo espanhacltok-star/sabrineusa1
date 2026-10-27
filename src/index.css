@@ -1,0 +1,147 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --mirror: linear-gradient(135deg, #8E9296 0%, #F4F5F6 22%, #B4B8BC 45%, #FFFFFF 62%, #9A9EA2 80%, #E6E8EA 100%);
+    --mirror-dark: linear-gradient(135deg, #6A6E72 0%, #2A2C2E 100%);
+    --mirror-border: linear-gradient(135deg, #8E9296, #E6E8EA, #B4B8BC, #FFFFFF, #9A9EA2);
+  }
+
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Albert Sans', system-ui, -apple-system, sans-serif;
+    color: #2A2C2E;
+  }
+}
+
+.font-forum {
+  font-family: 'Forum', Georgia, serif;
+}
+
+.font-signature {
+  font-family: 'Mrs Saint Delafield', cursive;
+}
+
+/* Mirror effects */
+.bg-mirror {
+  background: var(--mirror);
+}
+
+.bg-mirror-dark {
+  background: var(--mirror-dark);
+}
+
+.text-mirror-dark {
+  background: var(--mirror-dark);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-mirror-bright {
+  background: linear-gradient(135deg, #2A2C2E 0%, #6A6E72 50%, #2A2C2E 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.mirror-border-wrap {
+  position: relative;
+  border-radius: 6px;
+  background: linear-gradient(135deg, #8E9296, #F4F5F6, #B4B8BC, #FFFFFF, #9A9EA2);
+  padding: 1.5px;
+}
+
+.mirror-border-wrap-inner {
+  background: #FFFFFF;
+  border-radius: calc(6px - 1.5px);
+}
+
+/* Diagonal reflection shine effect */
+.shine-effect {
+  position: relative;
+  overflow: hidden;
+}
+
+.shine-effect::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -60%;
+  width: 40%;
+  height: 200%;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.45) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: rotate(30deg);
+  pointer-events: none;
+  transition: all 0.75s ease-in-out;
+}
+
+.shine-effect:hover::after {
+  left: 120%;
+  transition: all 1s ease-in-out;
+}
+
+/* Continuous slow sheen for hero image */
+@keyframes slowSheen {
+  0% {
+    left: -100%;
+  }
+  30% {
+    left: 140%;
+  }
+  100% {
+    left: 140%;
+  }
+}
+
+.animate-sheen::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -80%;
+  width: 50%;
+  height: 200%;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.5) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: rotate(25deg);
+  pointer-events: none;
+  animation: slowSheen 6s infinite cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Almond nail shaped frame for Hero photo */
+.almond-frame {
+  border-top-left-radius: 50% 35%;
+  border-top-right-radius: 50% 35%;
+  border-bottom-left-radius: 28px;
+  border-bottom-right-radius: 28px;
+}
+
+/* Secondary offset frame line */
+.almond-outer-line {
+  position: absolute;
+  inset: -8px;
+  border: 1px solid rgba(180, 184, 188, 0.5);
+  border-top-left-radius: 50% 35%;
+  border-top-right-radius: 50% 35%;
+  border-bottom-left-radius: 36px;
+  border-bottom-right-radius: 36px;
+  pointer-events: none;
+  transform: rotate(-1.5deg);
+}
+
+/* Accessible focus outline */
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid #2A2C2E;
+  outline-offset: 2px;
+}
